@@ -1,55 +1,67 @@
-# 📩 SMS Spam Detection Using Machine Learning
+# 📩 SMS Spam Detection Using Naive Bayes Classifiers
 
-## 🧠 Problem Statement
+## 📌 Problem Statement
 
-In the era of digital communication, **spam messages** are a significant problem that can mislead users, waste time, and sometimes result in financial loss or security threats. The objective of this project is to build a **Machine Learning-based model** that can **accurately classify SMS messages** as either:
-
-- **Spam** (unwanted, malicious, or promotional content)
-- **Ham** (genuine messages)
-
-This project utilizes **Natural Language Processing (NLP)** techniques and supervised learning algorithms to detect spam in text messages.
+Spam SMS messages can clutter inboxes, waste time, and pose serious security threats. The goal of this project is to build an efficient text classification system that can automatically detect whether an SMS message is **spam** or **ham** (not spam), using **machine learning** and **natural language processing (NLP)** techniques.
 
 ---
 
-## 📊 Project Overview
+## 🧠 Algorithms Used
 
-This notebook-based project performs:
+This project experiments with three types of **Naive Bayes classifiers**:
 
-1. **Data Cleaning & Preprocessing**
-2. **Text Feature Extraction using CountVectorizer/TF-IDF**
-3. **Model Building** using algorithms like Naive Bayes, Logistic Regression, etc.
-4. **Model Evaluation** through accuracy, precision, recall, and F1-score
-5. **Visualization** including word clouds and confusion matrices
+1. **Multinomial Naive Bayes**  
+2. **Bernoulli Naive Bayes**  
+3. **Gaussian Naive Bayes**
 
----
-
-## 📁 Dataset Description
-
-The dataset used is the [UCI SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection).  
-It contains **5,574** SMS messages labeled as:
-
-- `spam` — spam message  
-- `ham` — legitimate (non-spam) message  
-
-Each message is a single line of text with a corresponding label.
+Each of them is trained and evaluated using accuracy and precision metrics.
 
 ---
 
-## ⚙️ Environment Setup with Conda
+## 🎯 Model Performance
 
-Follow the steps below to run the project in a **Conda environment**.
+| Model                    | Accuracy (Test Set) |
+|-------------------------|---------------------|
+| Multinomial Naive Bayes | ✅ 97.95%            |
+| Bernoulli Naive Bayes   | ✅ 96.66%            |
+| Gaussian Naive Bayes    | ✅ 81.97%            |
 
-### 📦 Step 1: Install Anaconda or Miniconda
-
-Download and install:
-- [Anaconda](https://www.anaconda.com/products/distribution) (recommended) or
-- [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+> ✅ **Best Performing Model:** Multinomial Naive Bayes  
+> It achieved the **highest accuracy of 97.95%** on the test data.
 
 ---
 
-### 🧪 Step 2: Create a Conda Environment
+## 📂 Dataset
+
+The project uses the [SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) which contains 5,574 SMS messages labeled as:
+- `ham` – legitimate message
+- `spam` – unwanted message
+
+---
+
+## 🧼 Data Preprocessing
+
+Steps included:
+
+1. Lowercasing text
+2. Removing punctuation and special characters
+3. Removing stopwords using NLTK
+4. Stemming with `PorterStemmer`
+5. Encoding target labels using `LabelEncoder`
+6. Vectorization using `TF-IDF`
+
+---
+
+## ⚙️ Environment Setup (with Conda)
+
+Follow the instructions to set up and run the project locally.
+
+### 1️⃣ Install Conda
+Get [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+
+### 2️⃣ Create and Activate Environment
 
 ```bash
-conda create --name sms-spam-detection python=3.11 -y
+conda create --name sms-spam-detection python=3.9 -y
 conda activate sms-spam-detection
 pip install -r requirements.txt
