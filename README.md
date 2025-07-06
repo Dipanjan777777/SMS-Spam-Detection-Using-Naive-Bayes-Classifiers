@@ -72,6 +72,6 @@ Get [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](ht
 ### 2️⃣ Create and Activate Environment
 
 ```bash
-conda create --name sms-spam-detection python=3.9 -y
+conda create --name sms-spam-detection python=3.11 -y
 conda activate sms-spam-detection
 pip install -r requirements.txt
