@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Conda environment files
+.env/
+.venv/
+env/
+venv/
+*.conda
+*.env
+*.yml
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs and outputs
+*.log
+*.out
+*.tmp
+
+# Python virtualenv
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Notebook output cells (optional – for large projects)
+*.nbconvert.ipynb
+
+# Data files
+data/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.zip
+
+# Environment lock files
+pip-log.txt
+pip-delete-this-directory.txt
+requirements.txt
+
+# Jupyter runtime
+~$*
