@@ -33,9 +33,19 @@ Each of them is trained and evaluated using accuracy and precision metrics.
 
 ## 📂 Dataset
 
-The project uses the [SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) which contains 5,574 SMS messages labeled as:
-- `ham` – legitimate message
-- `spam` – unwanted message
+This project uses the **[SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)** from Kaggle.
+
+### 🧾 Dataset Details:
+- **Total samples:** 5,574 SMS messages  
+- **Columns:**
+  - `v1` – Label: `ham` (genuine) or `spam` (unwanted)
+  - `v2` – SMS message text
+- **Preprocessing:**
+  - Dropped unnecessary columns: `Unnamed: 2`, `Unnamed: 3`, `Unnamed: 4`
+  - Renamed:
+    - `v1` → `target`
+    - `v2` → `text`
+  - Encoded labels: `ham` = 0, `spam` = 1
 
 ---
 
