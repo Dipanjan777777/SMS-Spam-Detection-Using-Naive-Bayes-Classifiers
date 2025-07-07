@@ -54,7 +54,6 @@ data/
 # Environment lock files
 pip-log.txt
 pip-delete-this-directory.txt
-requirements.txt
 
 # Jupyter runtime
 ~$*
